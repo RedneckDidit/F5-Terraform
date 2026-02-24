@@ -54,8 +54,9 @@ resource "bigip_ltm_pool" "pool" {
 }
 
 resource "bigip_ltm_pool_attachment" "ipv4_node_attach" {
+for_each = toset([bigip_ltm_node.node1.name, bigip_ltm_node.node2.name,bigip_ltm_node.node3.name])
   pool = bigip_ltm_pool.pool.name
-  node = [node1,node2,node3]
+  node = "${each.key}:80"
 }
 
 
