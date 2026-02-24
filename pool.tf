@@ -12,5 +12,5 @@ resource "bigip_ltm_pool" "pool" {
 
 resource "bigip_ltm_pool_attachment" "ipv4_node_attach" {
   pool = bigip_ltm_pool.pool.name
-  node = [node-1,node-2,node-3]
+  node = [node1,node2,node3]
 }
