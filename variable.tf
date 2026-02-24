@@ -1,3 +1,9 @@
-variable hostname {}
-variable username {}
-variable password {}
+variable "hostname" {
+      type = string
+}
+variable "username" {
+      type = string
+}
+variable"password" {
+      type = string
+}
