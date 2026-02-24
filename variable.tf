@@ -4,6 +4,6 @@ variable "hostname" {
 variable "username" {
       type = string
 }
-variable"password" {
+variable "password" {
       type = string
 }
